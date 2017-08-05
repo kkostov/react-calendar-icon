@@ -30,6 +30,7 @@
     "react": "^15.6.1",
     "styled-components": "^2.1.2"
   },
+  "files": ["CODE_OF_CONDUCT.md", "dist", "lib", "src"],
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",

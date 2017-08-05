@@ -4,7 +4,7 @@ node_js:
   - 7
   - 8
 script:
-  - npm lint
+  - npm run lint
   - npm test
 notifications:
   email:
