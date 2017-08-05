@@ -1,4 +1,6 @@
-.DS_Store
-build
 node_modules
-*.log
+lib
+npm-debug.log.*
+dist
+.DS_Store
+bundle-stats.html

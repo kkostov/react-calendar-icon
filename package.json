@@ -2,11 +2,13 @@
   "name": "react-calendar-icon",
   "version": "0.1.0",
   "description": "A customizable date badge component in the shape of a familiar calendar icon ",
-  "main": "build/index.js",
+  "main": "lib/index.js",
+  "module": "dist/react-calendar-icon.es.js",
   "scripts": {
-    "build": "babel lib -d build",
-    "lint": "eslint lib/**; exit 0",
-    "lint:watch": "esw -w lib/**",
+    "build": "babel src -d lib",
+    "build:dist": "rollup -c && cross-env NODE_ENV=production rollup -c",
+    "lint": "eslint src/**; exit 0",
+    "lint:watch": "esw -w src/**",
     "prepublish": "npm run build",
     "test": "jest"
   },
@@ -14,8 +16,13 @@
     "type": "git",
     "url": "git+https://github.com/kkostov/react-calendar-icon.git"
   },
-  "keywords": ["react", "front-end", "calendar", "date"],
-  "author": "Konstantin <me@kvkostov.eu>",
+  "keywords": [
+    "react",
+    "front-end",
+    "calendar",
+    "date"
+  ],
+  "author": "Konstantin Kostov <me@kvkostov.eu>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kkostov/react-calendar-icon/issues"
@@ -23,10 +30,8 @@
   "homepage": "https://github.com/kkostov/react-calendar-icon#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "rollup-plugin-uglify": "^2.0.1",
-    "rollup-plugin-visualizer": "^0.3.1",
+    "react": "^15.6.1",
     "styled-components": "^2.1.2"
   },
   "devDependencies": {
@@ -35,10 +40,12 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.3",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
@@ -51,7 +58,10 @@
     "rollup": "^0.45.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.1.0",
+    "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-plugin-visualizer": "^0.3.1",
     "webpack": "^3.4.1"
   }
 }
