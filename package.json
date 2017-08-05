@@ -7,18 +7,14 @@
     "build": "babel lib -d build",
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kkostov/react-calendar-icon.git"
   },
-  "keywords": [
-    "react",
-    "front-end",
-    "calendar",
-    "date"
-  ],
+  "keywords": ["react", "front-end", "calendar", "date"],
   "author": "Konstantin <me@kvkostov.eu>",
   "license": "MIT",
   "bugs": {
@@ -51,6 +47,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4",
     "rollup": "^0.45.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.1.0",
