@@ -9,7 +9,7 @@ A date badge component in the shape of a familiar calendar icon with support for
 npm install --save react-calendar-icon
 ```
 
-[![Build Status](https://travis-ci.org/kkostov/react-calendar-icon.svg?branch=master)](https://travis-ci.org/kkostov/react-calendar-icon.svg?branch=master)
+[![Build Status](https://travis-ci.org/kkostov/react-calendar-icon.svg?branch=master)](https://travis-ci.org/kkostov/react-calendar-icon)
 
 # Usage
 
