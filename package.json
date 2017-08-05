@@ -11,7 +11,9 @@
     "lint": "eslint src",
     "lint:watch": "esw -w src/**",
     "prepublish": "npm run build",
-    "test": "jest"
+    "test": "npm run test:web && npm run test:size",
+    "test:web": "jest",
+    "test:size": "bundlesize"
   },
   "repository": {
     "type": "git",
@@ -42,6 +44,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "bundlesize": "^0.13.2",
     "cross-env": "^5.0.3",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
@@ -60,5 +63,11 @@
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-plugin-visualizer": "^0.3.1",
     "webpack": "^3.4.1"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/react-calendar-icon.min.js",
+      "threshold": "2kB"
+    }
+  ]
 }
