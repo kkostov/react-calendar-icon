@@ -3,6 +3,8 @@
 A date badge component in the shape of a familiar calendar icon with support for theming and localization.
 
 
+[Demo](https://react-calendar-icon-demo.now.sh)
+
 ```
 npm install --save react-calendar-icon
 ```
