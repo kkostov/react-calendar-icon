@@ -10,7 +10,7 @@ npm install --save react-calendar-icon
 
 # Usage
 
-```
+```JSX
 import React, { Component } from "react";
 import { CalendarIcon } from "react-calendar-icon";
 
@@ -43,7 +43,7 @@ The `CalendarIcon` component takes an optional prop `options` which can be used 
 The values for the `header`, `footer` and `value` sections of the icon are objects passed to ([Date.prototype.toLocaleDateString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString))
 
 
-```
+```JSX
 import React, { Component } from "react";
 import { CalendarIcon } from "react-calendar-icon";
 
@@ -71,7 +71,7 @@ export default App;
 
 It is possible to customize the look-and-feel of the icon by using a `ThemeProvider` component from `styled-components`. Add a `calendarIcon` member with the following attributes:
 
-```
+```JSX
 import React, { Component } from "react";
 import { CalendarIcon } from "react-calendar-icon";
 import { ThemeProvider } from "styled-components";
