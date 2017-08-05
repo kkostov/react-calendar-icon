@@ -6,7 +6,8 @@ const HeaderDiv = styled.div`
   background-color: ${props => themedConfig(props.theme).primaryColor};
   width: 100%;
   text-align: center;
-  font-size: .9rem;
+  font-size: .8rem;
+  line-height: .9rem;
 `
 
 export default HeaderDiv

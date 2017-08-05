@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "module": "dist/react-calendar-icon.es.js",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "npm run build:lib && npm run build:dist",
+    "build:lib": "babel src -d lib",
     "build:dist": "rollup -c && cross-env NODE_ENV=production rollup -c",
     "lint": "eslint src/**; exit 0",
     "lint:watch": "esw -w src/**",
