@@ -4,8 +4,8 @@ import { themedConfig } from '../config'
 const IconDiv = styled.div`
   font-size: 0.7em;
   background-color: ${props => themedConfig(props.theme).backgroundColor};
-  height: 7em;
-  width: 7em;
+  height: 8em;
+  width: 8em;
   border-radius: 0.7em;
   overflow: hidden;
   display: flex;
