@@ -7,7 +7,7 @@ const FooterDiv = styled.div`
   width: 100%;
   text-align: center;
   font-size: .8rem;
-  line-height: .9rem;
+  line-height: .95rem;
 `
 
 export default FooterDiv
