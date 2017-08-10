@@ -10,7 +10,7 @@ const IconDiv = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
 `
 
