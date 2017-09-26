@@ -54,7 +54,7 @@
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-react": "7.3.0",
     "eslint-plugin-standard": "3.0.1",
-    "jest": "21.1.0",
+    "jest": "21.2.0",
     "rollup": "0.48.2",
     "rollup-plugin-babel": "3.0.2",
     "rollup-plugin-commonjs": "8.1.0",
