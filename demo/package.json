@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-calendar-icon": "^0.9.0",
-    "react-dom": "^15.6.1",
+    "react-dom": "^15.0.0",
     "react-scripts": "1.0.11"
   },
   "scripts": {
