@@ -45,7 +45,7 @@
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.1",
     "bundlesize": "0.13.2",
-    "cross-env": "5.0.5",
+    "cross-env": "5.1.4",
     "eslint": "4.5.0",
     "eslint-config-standard": "10.2.1",
     "eslint-config-standard-react": "5.0.0",
