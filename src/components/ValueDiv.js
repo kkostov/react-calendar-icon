@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from '../styled'
 
-const ValueDiv = styled.div`
-  letter-spacing: -0.05em;
-  font-size: 2.6rem;
-  margin-right: 0.15em;
-  margin-top: 0.1em;
-`
+const ValueDiv = styled('div')({
+  letterSpacing: '-0.05em',
+  fontSize: '2.6rem',
+  marginRight: '0.15em',
+  marginTop: '0.1em',
+})
 
 export default ValueDiv

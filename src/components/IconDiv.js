@@ -1,17 +1,17 @@
-import styled from 'styled-components'
+import styled from '../styled'
 import { themedConfig } from '../config'
 
-const IconDiv = styled.div`
-  font-size: 0.7em;
-  background-color: ${props => themedConfig(props.theme).backgroundColor};
-  height: 8em;
-  width: 8em;
-  border-radius: 0.7em;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-`
+const IconDiv = styled('div')({
+  fontSize: '0.7em',
+  backgroundColor: props => themedConfig(props.theme).backgroundColor,
+  height: '8em',
+  width: '8em',
+  borderRadius: '0.7em',
+  overflow: 'hidden',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+})
 
 export default IconDiv

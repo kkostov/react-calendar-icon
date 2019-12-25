@@ -5,7 +5,6 @@
     "standard-react",
     "plugin:react/recommended"
   ],
-  "rules": {},
   "parserOptions": {
     "ecmaVersion": 7,
     "sourceType": "module",
@@ -17,5 +16,8 @@
   },
   "env": {
     "jest": true
+  },
+  "rules": {
+    "comma-dangle": "off"
   }
 }

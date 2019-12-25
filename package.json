@@ -29,8 +29,7 @@
   "dependencies": {
     "prop-types": "^15.5.10",
     "react-dom": "^15.6.1",
-    "react": "^15.6.1",
-    "styled-components": "^2.1.2"
+    "react": "^15.6.1"
   },
   "files": ["CODE_OF_CONDUCT.md", "dist", "lib", "src"],
   "devDependencies": {
@@ -63,6 +62,10 @@
     "rollup-plugin-uglify": "2.0.1",
     "rollup-plugin-visualizer": "0.3.1",
     "webpack": "3.5.5"
+  },
+  "peerDependencies": {
+    "styled-components": "^2.1.2",
+    "styled-jss": "^2.2.3"
   },
   "bundlesize": [
     {
