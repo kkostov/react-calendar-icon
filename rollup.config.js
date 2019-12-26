@@ -4,7 +4,6 @@ import babel from 'rollup-plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
 import visualizer from 'rollup-plugin-visualizer'
 import json from 'rollup-plugin-json'
-import pkg from './package.json'
 
 const prod = process.env.NODE_ENV === 'production'
 const mode = prod ? 'production' : 'development'
@@ -37,19 +36,18 @@ if (prod) {
 const globals = {
   react: 'React',
   'prop-types': 'PropTypes',
-  'styled-components': 'styled'
+  'styled-components': 'styled',
+  'styled-jss': 'styled',
 }
 
 export default {
   input: 'lib/index.js',
-  moduleName: 'ReactCalendarIcon',
-  external: ['react'].concat(Object.keys(pkg.dependencies)),
-  exports: 'named',
   output: prod
-    ? [{ file: 'dist/react-calendar-icon.min.js', format: 'umd', globals, name: 'ReactCalendarIcon' }]
+    ? [{ file: 'dist/react-calendar-icon.min.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' }]
     : [
-      { file: 'dist/react-calendar-icon.js', format: 'umd', globals, name: 'ReactCalendarIcon' },
+      { file: 'dist/react-calendar-icon.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' },
       { file: 'dist/react-calendar-icon.es.js', format: 'es' }
     ],
+  external: ['react', 'prop-types', 'styled-components', 'styled-jss'],
   plugins,
 }

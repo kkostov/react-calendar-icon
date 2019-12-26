@@ -66,7 +66,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-visualizer": "^3.3.1",
-    "styled-components": "^4.4.1",
+    "styled-jss": "^2.2.3",
     "webpack": "^4.41.4"
   },
   "peerDependencies": {
