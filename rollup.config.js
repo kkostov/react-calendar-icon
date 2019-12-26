@@ -46,7 +46,7 @@ export default {
     ? [{ file: 'dist/react-calendar-icon.min.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' }]
     : [
       { file: 'dist/react-calendar-icon.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' },
-      { file: 'dist/react-calendar-icon.es.js', format: 'es' }
+      { file: 'dist/react-calendar-icon.cjs.js', format: 'cjs' }
     ],
   external: ['react', 'prop-types', 'styled-components', 'styled-jss'],
   plugins,

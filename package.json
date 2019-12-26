@@ -2,8 +2,8 @@
   "name": "react-calendar-icon",
   "version": "0.9.2",
   "description": "A customizable date badge component in the shape of a familiar calendar icon ",
-  "main": "lib/index.js",
-  "module": "dist/react-calendar-icon.es.js",
+  "main": "dist/react-calendar-icon.cjs.js",
+  "module": "lib/index.js",
   "scripts": {
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "babel src -d lib",
@@ -66,8 +66,8 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-visualizer": "^3.3.1",
-    "styled-jss": "^2.2.3",
-    "webpack": "^4.41.4"
+    "styled-components": "^4.4.1",
+    "styled-jss": "^2.2.3"
   },
   "peerDependencies": {
     "styled-components": "^4.4.1",
