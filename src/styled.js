@@ -4,6 +4,6 @@ try {
   try {
     module.exports = require('styled-jss').default
   } catch (e) {
-    throw new Error('Either styled-components or styled-jss must be installed');
+    throw new Error('Either styled-components or styled-jss must be installed')
   }
 }
