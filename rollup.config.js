@@ -1,9 +1,9 @@
-import nodeResolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
+import nodeResolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import json from '@rollup/plugin-json'
 import babel from 'rollup-plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
 import visualizer from 'rollup-plugin-visualizer'
-import json from 'rollup-plugin-json'
 
 const prod = process.env.NODE_ENV === 'production'
 const mode = prod ? 'production' : 'development'
@@ -14,18 +14,8 @@ const plugins = [
   nodeResolve(),
   commonjs({
     ignoreGlobal: true,
-    namedExports: {
-      'node_modules/react-is/index.js': [
-        'isElement',
-        'isValidElementType',
-        'ForwardRef'
-      ]
-    }
   }),
-  babel({
-    babelrc: false,
-    presets: [['@babel/preset-env', { modules: false, loose: true }], '@babel/preset-react']
-  }),
+  babel(),
   json()
 ]
 
@@ -46,7 +36,7 @@ export default {
     ? [{ file: 'dist/react-calendar-icon.min.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' }]
     : [
       { file: 'dist/react-calendar-icon.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' },
-      { file: 'dist/react-calendar-icon.cjs.js', format: 'cjs' }
+      { file: 'dist/react-calendar-icon.cjs.js', format: 'cjs', exports: 'named' }
     ],
   external: ['react', 'prop-types', 'styled-components', 'styled-jss'],
   plugins,
