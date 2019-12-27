@@ -1,8 +1,7 @@
 sudo: false
 language: node_js
 node_js:
-  - 7
-  - 8
+  - 10
 script:
   - npm run lint
   - npm test
@@ -10,9 +9,7 @@ notifications:
   email:
     on_failure: change
 cache:
-  yarn: true
   bundler: true
   directories:
     - node_modules
-before_script:
-  - npm install styled-components react@15
+=
