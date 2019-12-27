@@ -5,3 +5,5 @@ dist
 .DS_Store
 bundle-stats.html
 package-lock.json
+# IDE / Editor
+.idea
