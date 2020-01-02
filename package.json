@@ -1,6 +1,6 @@
 {
   "name": "react-calendar-icon",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "A customizable date badge component in the shape of a familiar calendar icon ",
   "type": "module",
   "main": "dist/react-calendar-icon.cjs.js",
