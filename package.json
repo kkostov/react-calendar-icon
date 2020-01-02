@@ -13,7 +13,8 @@
     "lint:watch": "esw -w src/**",
     "test": "npm run test:web && npm run test:size",
     "test:web": "jest",
-    "test:size": "bundlesize"
+    "test:size": "bundlesize",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
