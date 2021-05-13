@@ -1,4 +1,4 @@
-import styled from '../styled'
+import styled from 'styled-components'
 import { themedConfig } from '../config'
 
 const IconDiv = styled('div')({

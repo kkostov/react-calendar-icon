@@ -1,4 +1,4 @@
-import styled from '../styled'
+import styled from 'styled-components'
 
 const ValueDiv = styled('div')({
   letterSpacing: '-0.05em',
