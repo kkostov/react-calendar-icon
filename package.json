@@ -34,8 +34,8 @@
   "homepage": "https://github.com/kkostov/react-calendar-icon#readme",
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "files": [
     "CODE_OF_CONDUCT.md",
@@ -69,12 +69,10 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-visualizer": "^3.3.1",
-    "styled-components": "^4.4.1",
-    "styled-jss": "^2.2.3"
+    "styled-components": "^5.3.0"
   },
   "peerDependencies": {
-    "styled-components": "^4.4.1",
-    "styled-jss": "^2.2.3"
+    "styled-components": ">=4"
   },
   "bundlesize": [
     {
