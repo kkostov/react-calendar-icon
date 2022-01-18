@@ -25,19 +25,25 @@ if (prod) {
 
 const globals = {
   react: 'React',
-  'prop-types': 'PropTypes',
-  'styled-components': 'styled',
-  'styled-jss': 'styled',
+  '@emotion/styled': 'emotionStyled',
 }
 
 export default {
-  input: 'lib/index.js',
-  output: prod
-    ? [{ file: 'dist/react-calendar-icon.min.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' }]
-    : [
-      { file: 'dist/react-calendar-icon.js', format: 'umd', globals, name: 'ReactCalendarIcon', exports: 'named' },
-      { file: 'dist/react-calendar-icon.cjs.js', format: 'cjs', exports: 'named' }
-    ],
-  external: ['react', 'prop-types', 'styled-components', 'styled-jss'],
+  input: 'lib/module.js',
+  output: [
+    {
+      file: `dist/react-calendar-icon${prod ? '.min' : ''}.js`,
+      format: 'umd',
+      globals,
+      name: 'ReactCalendarIcon',
+      exports: 'named'
+    },
+    ...prod ? [{
+      file: 'dist/react-calendar-icon.cjs.js',
+      format: 'cjs',
+      exports: 'named'
+    }] : [],
+  ],
+  external: ['react', '@emotion/styled'],
   plugins,
 }

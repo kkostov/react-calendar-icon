@@ -1,3 +1,6 @@
-export { default, default as CalendarIcon } from './components/CalendarIcon'
-export { default as ContentIcon } from './components/ContentIcon'
-export { DEFAULT_CONFIG } from './config'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './demo/App.js'
+
+
+ReactDOM.render(<App />, document.getElementById('root'))
