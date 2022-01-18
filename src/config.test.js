@@ -1,18 +1,11 @@
-import { DEFAULT_CONFIG, themedConfig } from './config'
+import themedConfig from './config'
 
 describe('config', () => {
-  describe('DEFAULT_CONFIG', () => {
-    it('should be an object', () => {
-      expect(DEFAULT_CONFIG).toBeInstanceOf(Object)
-    })
-    it('should contain calendarIcon property', () => {
-      expect(DEFAULT_CONFIG).toHaveProperty('calendarIcon')
-    })
+  it('should be a function', () => {
+    expect(themedConfig).toBeInstanceOf(Function)
   })
 
-  describe('themedConfig', () => {
-    it('should be a functon', () => {
-      expect(themedConfig).toBeInstanceOf(Function)
-    })
+  it('should have default props', () => {
+    expect(Object.keys(themedConfig())).toStrictEqual(['textColor', 'primaryColor', 'backgroundColor'])
   })
 })
