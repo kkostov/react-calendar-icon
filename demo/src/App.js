@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { CalendarIcon } from 'react-calendar-icon'
-import { ThemeProvider } from 'styled-components'
+import React from 'react';
+import CalendarIcon from 'react-calendar-icon';
+import { ThemeProvider } from '@emotion/react';
 
 import './App.css'
 
@@ -19,61 +19,57 @@ const dateOptions = {
   locale: 'nl'
 }
 
-class App extends Component {
-  render () {
-    return (
-      <div className='demo'>
-        <div className='sample'>
-          <div>
-            <h3>Default theme</h3>
-            <CalendarIcon date={new Date()} />
-            <div className='code'>
-              <pre>
-                {'<CalendarIcon date={new Date()} />'}
-              </pre>
-            </div>
-          </div>
-        </div>
-        <div className='sample'>
-          <ThemeProvider theme={theme}>
-            <div>
-              <h3>Customized using a theme provider</h3>
-              <CalendarIcon date={new Date()} />
-            </div>
-          </ThemeProvider>
+export default function App() {
+  return (
+    <div className='demo'>
+      <div className='sample'>
+        <div>
+          <h3>Default theme</h3>
+          <CalendarIcon date={new Date()} />
           <div className='code'>
             <pre>
-              {`
-<ThemeProvider theme={theme}>
-  <CalendarIcon date={new Date()} />
-</ThemeProvider>`}
+              {'<CalendarIcon date={new Date()} />'}
             </pre>
           </div>
         </div>
-        <div className='sample'>
+      </div>
+      <div className='sample'>
+        <ThemeProvider theme={theme}>
           <div>
-            <h3>Setting date options</h3>
-            <CalendarIcon date={new Date()} options={dateOptions} />
-            <div className='code'>
-              <pre>
-                {`
+            <h3>Customized using a theme provider</h3>
+            <CalendarIcon date={new Date()} />
+          </div>
+        </ThemeProvider>
+        <div className='code'>
+          <pre>
+            {`
+<ThemeProvider theme={theme}>
+  <CalendarIcon date={new Date()} />
+</ThemeProvider>`}
+          </pre>
+        </div>
+      </div>
+      <div className='sample'>
+        <div>
+          <h3>Setting date options</h3>
+          <CalendarIcon date={new Date()} options={dateOptions} />
+          <div className='code'>
+            <pre>
+              {`
 const dateOptions = {
   header: { weekday: 'long' },
   footer: { month: 'short' },
   value: { day: '2-digit' },
   locale: 'nl'
 }`}
-              </pre>
-              <pre>...</pre>
-              <pre>
-                {'<CalendarIcon date={new Date()} options={dateOptions} />'}
-              </pre>
-            </div>
+            </pre>
+            <pre>...</pre>
+            <pre>
+              {'<CalendarIcon date={new Date()} options={dateOptions} />'}
+            </pre>
           </div>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
-
-export default App

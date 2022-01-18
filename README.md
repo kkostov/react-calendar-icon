@@ -66,12 +66,12 @@ export default function App(props) {
 
 # Theming
 
-It is possible to customize the look-and-feel of the icon by using a `ThemeProvider` component from `styled-components`. Add a `calendarIcon` member with the following attributes:
+It is possible to customize the look-and-feel of the icon by using a `ThemeProvider` component from `@emotion/react`. Add a `calendarIcon` member with the following attributes:
 
 ```jsx
 import React from "react";
 import CalendarIcon from "react-calendar-icon";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "@emotion/react";
 
 const theme = {
   calendarIcon: {

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-calendar-icon/demo/build/static/css/main.c6e7f6cb.css",
+    "main.js": "/react-calendar-icon/demo/build/static/js/main.71c498b3.js",
+    "index.html": "/react-calendar-icon/demo/build/index.html",
+    "main.c6e7f6cb.css.map": "/react-calendar-icon/demo/build/static/css/main.c6e7f6cb.css.map",
+    "main.71c498b3.js.map": "/react-calendar-icon/demo/build/static/js/main.71c498b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6e7f6cb.css",
+    "static/js/main.71c498b3.js"
+  ]
+}

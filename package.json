@@ -2,13 +2,10 @@
   "name": "react-calendar-icon",
   "version": "0.9.5",
   "description": "A customizable date badge component in the shape of a familiar calendar icon ",
-  "type": "module",
   "main": "dist/react-calendar-icon.cjs.js",
-  "module": "lib/index.js",
+  "module": "dist/react-calendar-icon.esm.js",
   "scripts": {
-    "build": "npm run build:lib && npm run build:dist",
-    "build:lib": "babel src -d lib",
-    "build:dist": "rollup -c && cross-env NODE_ENV=production rollup -c",
+    "build": "NODE_ENV=production rollup -c",
     "lint": "eslint src",
     "lint:watch": "esw -w src/**",
     "test": "npm run test:web && npm run test:size",
@@ -31,48 +28,39 @@
   "bugs": {
     "url": "https://github.com/kkostov/react-calendar-icon/issues"
   },
-  "homepage": "https://github.com/kkostov/react-calendar-icon#readme",
   "dependencies": {
-    "prop-types": "^15.7.2",
     "react": ">=16",
     "react-dom": ">=16"
   },
   "files": [
     "CODE_OF_CONDUCT.md",
     "dist",
-    "lib",
     "src"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/preset-react": "^7.7.4",
-    "@rollup/plugin-commonjs": "^11.0.0",
-    "@rollup/plugin-json": "^4.0.1",
-    "@rollup/plugin-node-resolve": "^6.0.0",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "babel-loader": "^8.0.6",
-    "bundlesize": "^0.18.0",
-    "cross-env": "^6.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-config-standard-react": "^9.2.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "jest": "^24.9.0",
-    "rollup": "^1.27.14",
-    "rollup-plugin-babel": "^4.3.3",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@typescript-eslint/parser": "^5.19.0",
+    "babel-jest": "^27.5.1",
+    "bundlesize": "^0.18.1",
+    "eslint": "^8.13.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.70.2",
     "rollup-plugin-uglify": "^6.0.4",
-    "rollup-plugin-visualizer": "^3.3.1",
-    "styled-components": "^5.3.0"
+    "rollup-plugin-visualizer": "^5.6.0"
   },
   "peerDependencies": {
-    "styled-components": ">=4"
+    "@emotion/react": ">=10",
+    "@emotion/styled": ">=10",
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "bundlesize": [
     {
@@ -81,6 +69,7 @@
     }
   ],
   "jest": {
+    "testEnvironment": "jsdom",
     "testMatch": [
       "**/src/**/*.test.js"
     ],
@@ -89,11 +78,17 @@
         "babel-jest",
         {
           "presets": [
-            "@babel/preset-env",
-            "@babel/preset-react"
+            "@babel/preset-env"
           ]
         }
       ]
     }
+  },
+  "browserslist": {
+    "production": [
+      ">2%",
+      "not op_mini all",
+      "not IE < 12"
+    ]
   }
 }

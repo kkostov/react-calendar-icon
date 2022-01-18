@@ -1,8 +1,0 @@
-{
-  "name": "react-calendar-icon-demo",
-  "alias": ["react-calendar-icon-demo"],
-  "public": true,
-  "engines": {
-    "node": "^7.0.0"
-  }
-}
