@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import { CalendarIcon } from 'react-calendar-icon'
-import { ThemeProvider } from 'styled-components'
 
 import './App.css'
 
 const theme = {
-  calendarIcon: {
-    textColor: 'white', // text color of the header and footer
-    primaryColor: '#0da472', // background of the header and footer
-    backgroundColor: '#fafafa'
-  }
+  '--calendar-icon-text': 'white', // text color of the header and footer
+  '--calendar-icon-primary': '#0da472', // background of the header and footer
+  '--calendar-icon-background': '#fafafa',
 }
 
 const dateOptions = {
@@ -35,18 +32,13 @@ class App extends Component {
           </div>
         </div>
         <div className='sample'>
-          <ThemeProvider theme={theme}>
-            <div>
-              <h3>Customized using a theme provider</h3>
-              <CalendarIcon date={new Date()} />
-            </div>
-          </ThemeProvider>
+          <div>
+            <h3>Customized using a theme style</h3>
+            <CalendarIcon date={new Date()} style={theme} />
+          </div>
           <div className='code'>
             <pre>
-              {`
-<ThemeProvider theme={theme}>
-  <CalendarIcon date={new Date()} />
-</ThemeProvider>`}
+              {`<CalendarIcon date={new Date()} style={theme} />`}
             </pre>
           </div>
         </div>

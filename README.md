@@ -66,27 +66,24 @@ export default function App(props) {
 
 # Theming
 
-It is possible to customize the look-and-feel of the icon by using a `ThemeProvider` component from `styled-components`. Add a `calendarIcon` member with the following attributes:
+It is possible to customize the look-and-feel of the icon by using a css variables:
 
 ```jsx
 import React from "react";
 import CalendarIcon from "react-calendar-icon";
-import { ThemeProvider } from "styled-components";
 
 const theme = {
-  calendarIcon: {
-    textColor: "white", // text color of the header and footer
-    primaryColor: "#0da472", // background of the header and footer
-    backgroundColor: "#fafafa"
-  }
+  '--calendar-icon-text': 'white', // text color of the header and footer
+  '--calendar-icon-primary': '#0da472', // background of the header and footer
+  '--calendar-icon-background': '#fafafa',
 };
 
 export default function App(props) {
   return (
-    <ThemeProvider theme={theme}>
+    <div>
       {/* ...  */}
-      <CalendarIcon date={new Date()} />
-    </ThemeProvider>
+      <CalendarIcon date={new Date()} style={theme} />
+    </div>
   );
 }
 ```

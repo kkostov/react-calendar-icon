@@ -1,0 +1,40 @@
+:root {
+  --calendar-icon-background: #fafafa;
+  --calendar-icon-text: white;
+  --calendar-icon-primary: #e85650;
+}
+
+.calendar-icon {
+  font-size: 0.7em;
+  background-color: var(--calendar-icon-background);
+  height: 8em;
+  width: 8em;
+  border-radius: 0.7em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.calendar-icon .calendar-header {
+  color: var(--calendar-icon-text);
+  background-color: var(--calendar-icon-primary);
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+.calendar-icon .calendar-value {
+  letter-spacing: -0.05em;
+  font-size: 2.6rem;
+  margin-right: 0.15em;
+  margin-top: 0.1em;
+}
+.calendar-icon .calendar-footer {
+  color: var(--calendar-icon-text);
+  background-color: var(--calendar-icon-primary);
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}

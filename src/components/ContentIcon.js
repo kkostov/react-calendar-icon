@@ -1,23 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import IconDiv from './IconDiv'
-import HeaderDiv from './HeaderDiv'
-import FooterDiv from './FooterDiv'
-import ValueDiv from './ValueDiv'
+import styles from '../styles.css'
 
-const ContentIcon = ({ header, value, footer }) =>
-  <IconDiv>
-    <HeaderDiv>
+const ContentIcon = ({ header, value, footer, className, ...props }) =>
+  <span className={`calendar-icon ${className || ''}`} {...props}>
+    <span className='calendar-header'>
       {header}
-    </HeaderDiv>
-    <ValueDiv>
+    </span>
+    <span className='calendar-value'>
       {value}
-    </ValueDiv>
-    <FooterDiv>
+    </span>
+    <span className='calendar-footer'>
       {footer}
-    </FooterDiv>
-  </IconDiv>
+    </span>
+  </span>
 
 ContentIcon.propTypes = {
   header: PropTypes.any,
