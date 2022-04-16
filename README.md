@@ -3,13 +3,15 @@
 A date badge component in the shape of a familiar calendar icon with support for theming and localization.
 
 
-[Demo](https://react-calendar-icon-demo.now.sh)
+[Demo](https://kkostov.github.io/react-calendar-icon/demo/build/)
 
 ```
 npm install --save react-calendar-icon
 ```
 
 [![Build Status](https://travis-ci.org/kkostov/react-calendar-icon.svg?branch=master)](https://travis-ci.org/kkostov/react-calendar-icon)
+[![npm](https://img.shields.io/npm/v/react-calendar-icon.svg)](https://www.npmjs.com/package/react-calendar-icon)
+
 
 # Usage
 
